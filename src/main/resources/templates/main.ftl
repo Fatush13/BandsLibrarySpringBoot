@@ -1,6 +1,10 @@
 <html>
     <body>
-        <div>List of bands</div>
+    <form method="post" action="filter">
+        <input type="text" name="filter" placeholder="Enter band name"/>
+        <button type="submit">Search</button>
+    </form>
+    <div>List of bands:</div>
         <#list bands as band>
             <div>
                 <b>${band.name}</b>

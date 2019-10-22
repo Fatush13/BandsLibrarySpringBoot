@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-     <meta charset="UTF-8">
-     <title>Home Page</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
 
     <body>
         <h1><p style="text-align:center">Hello, ${name}</p></h1>

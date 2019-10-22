@@ -12,17 +12,18 @@ public class Band {
     private String name;
     private String origin;
     private Integer foundation;
-    @ElementCollection(targetClass = Genre.class, fetch = FetchType.LAZY)
-    @CollectionTable(name = "band_genre", joinColumns = @JoinColumn(name = "band_id"))
-    @Enumerated(EnumType.STRING)
-    private Set<Genre> genre;
+    private String genre;
 
-    private String fileName;
+    public Band(String name, String genre, String origin, Integer foundation) {
+        this.name = name;
+        this.genre = genre;
+        this.origin = origin;
+        this.foundation = foundation;
+    }
 
     public Band() {
 
     }
-
 
     public Long getId() {
         return id;
@@ -56,19 +57,11 @@ public class Band {
         this.foundation = foundation;
     }
 
-    public Set<Genre> getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(Set<Genre> genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
-    }
-
-    public String getFileName() {
-        return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
     }
 }

@@ -16,7 +16,7 @@ public class MainController {
     @Autowired
     private BandRepo bandRepo;
 
-    @GetMapping("/greeting")
+    @GetMapping("/")
     public String greeting(
             @RequestParam(name = "name", required = false, defaultValue = "Guest") String name,
             Map<String, Object> model
@@ -25,7 +25,7 @@ public class MainController {
         return "greeting";
     }
 
-    @GetMapping
+    @GetMapping("/main")
     public String main(Model model) {
         Iterable<Band> bands = bandRepo.findAll();
 

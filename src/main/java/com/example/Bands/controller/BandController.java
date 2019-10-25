@@ -19,9 +19,8 @@ public class BandController {
     }
 
     @PostMapping("/addBand")
-    public String add(@RequestParam String name,
-                      @RequestParam String genre, @RequestParam String origin,
-                      @RequestParam Integer foundation
+    public String add(@RequestParam String name, @RequestParam String genre,
+                      @RequestParam String origin, @RequestParam Integer foundation
     ) {
         Band band = new Band(name, genre, origin, foundation);
 
